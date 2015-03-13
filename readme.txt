@@ -22,5 +22,5 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 == Changelog ==
 = 1.0.0 = 
 * March. 03, 2015 - v1.0.0
-* Realize Plugin
+* Released Plugin
 
