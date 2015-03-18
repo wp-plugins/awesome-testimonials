@@ -1,6 +1,6 @@
 === Awesome Testimonials ===
 Contributors: Prakash30
-Tags: Awesome, testimonials, testimonial, Auto rotate testimonial, Customizable testimonial
+Tags: testimonials, testimonial, testimony, Auto rotate testimonial, Customizable testimonial, shortcode, Awesome, 
 Requires at least: 3.0.1
 Tested up to: 4.1.1	
 Stable tag: 3.6.1
