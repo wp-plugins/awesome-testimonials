@@ -19,6 +19,13 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Place `[pra_testimonial]` in your Pages.
 
+
+== Screenshots ==
+
+1. Front end testimonial View
+2. Admin Penal - Testimonial Setting
+
+
 == Changelog ==
 = 1.0.0 = 
 * March. 03, 2015 - v1.0.0
