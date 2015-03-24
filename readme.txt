@@ -1,6 +1,6 @@
 === Awesome Testimonials ===
 Contributors: Prakash30
-Tags: testimonials, testimonial, testimony, Auto rotate testimonial, Customizable testimonial, shortcode, Awesome
+Tags: testimonials, testimonial, testimony, Auto rotate testimonial, customizable testimonial, shortcode, awesome, responsive 
 Requires at least: 3.0.1
 Tested up to: 4.1.1	
 Stable tag: 3.6.1
@@ -12,6 +12,11 @@ Integrate a testimonial into your WordPress web site.
 == Description ==
 
 Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and user friendly.Easy to add on your wordpress blog.
+
+* ** Multiple Effects
+* ** Responsive
+* ** Easy Customizable
+
 
 == Installation ==
 
@@ -30,4 +35,6 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 = 1.0.0 = 
 * March. 03, 2015 - v1.0.0
 * Released Plugin
+
+
 
