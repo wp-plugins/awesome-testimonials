@@ -13,9 +13,9 @@ Integrate a testimonial into your WordPress web site.
 
 Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and user friendly.Easy to add on your wordpress blog.
 
-* ** Multiple Effects
-* ** Responsive
-* ** Easy Customizable
+* Multiple Effects
+* Responsive
+* Easy Customizable
 
 
 == Installation ==
