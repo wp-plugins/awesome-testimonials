@@ -154,6 +154,12 @@ function isNumber(evt)
           <select name="pra_effect" id="pra_effect" >
               <option  value="crossfade"  <?php if($myrows[0]=='crossfade') echo 'selected="selected"'; ?>>CrossFade</option>
               <option  value="scroll" <?php if($myrows[0]=='scroll') echo 'selected="selected"'; ?> >Scroll</option>
+              <option  value="fade" <?php if($myrows[0]=='scroll') echo 'selected="selected"'; ?> >Fade</option>
+              <option  value="cover" <?php if($myrows[0]=='cover') echo 'selected="selected"'; ?> >Cover</option>
+              <option  value="cover-fade" <?php if($myrows[0]=='cover-fade') echo 'selected="selected"'; ?> >Cover Fade</option>
+              <option  value="uncover" <?php if($myrows[0]=='uncover') echo 'selected="selected"'; ?> >Uncover</option>
+              <option  value="uncover-fade" <?php if($myrows[0]=='uncover-fade') echo 'selected="selected"'; ?> >Uncover Fade</option>
+              <option  value="none" <?php if($myrows[0]=='none') echo 'selected="selected"'; ?> >None</option>
             </select></td>
         </tr>
         <tr>
