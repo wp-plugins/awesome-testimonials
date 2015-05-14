@@ -2,7 +2,7 @@
 Contributors: Prakash30
 Tags: testimonials, testimonial, testimony, Auto rotate testimonial, customizable testimonial, shortcode, awesome, responsive 
 Requires at least: 3.0.1
-Tested up to: 4.1.1	
+Tested up to: 4.2.2	
 Stable tag: 3.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,9 +13,15 @@ Integrate a testimonial into your WordPress web site.
 
 Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and user friendly.Easy to add on your wordpress blog.
 
-* Multiple Effects
-* Responsive
+* Multiple transitions
+* Responsive / Mobile Friendly
 * Easy Customizable
+* Easy to Use
+* Autoplay option
+* Shortcode Powered
+* Simple Testimonial Management Interface
+* Most Browser Supported
+
 
 
 == Installation ==
