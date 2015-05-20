@@ -3,8 +3,6 @@ $pro_table_prefix=$wpdb->prefix.'pra_';
 
 if(isset($_POST['submit']))
 {	
-
- 
 	 $pra_effect = sanitize_text_field($_POST['pra_effect']);
 	 $pra_display_arrow = sanitize_text_field($_POST['pra_display_arrow']);	
 	 $pra_show_image = sanitize_text_field($_POST['pra_show_image']);	
@@ -12,8 +10,12 @@ if(isset($_POST['submit']))
  	 $pra_scrollduration = sanitize_text_field($_POST['pra_scrollduration']);	
   	 $pra_pauseonhover = sanitize_text_field($_POST['pra_pauseonhover']);	
 	 $pra_autoplay = sanitize_text_field($_POST['pra_autoplay']);	
+	 $pra_star_ratings = sanitize_text_field($_POST['pra_star_ratings']);	
+	 $pra_designation = sanitize_text_field($_POST['pra_designation']);	
+
+
 	 
-   $wpdb->update( 
+    $wpdb->update( 
 	$pro_table_prefix.'testimonial_settings', 
 			array( 
 				'value' => $pra_effect
@@ -100,6 +102,32 @@ if(isset($_POST['submit']))
 			array( '%s' ) 
 			);
 			
+			
+	$wpdb->update( 
+	$pro_table_prefix.'testimonial_settings', 
+			array( 
+				'value' => $pra_star_ratings
+			), 
+			array( 'id' => 8 ), 
+			array( 
+				'%d'	// value2
+			), 
+			array( '%d' ) 
+			);
+	
+	
+	$wpdb->update( 
+	$pro_table_prefix.'testimonial_settings', 
+			array( 
+				'value' => $pra_designation
+			), 
+			array( 'id' => 9 ), 
+			array( 
+				'%d'	// value2
+			), 
+			array( '%d' ) 
+			);
+			
 			echo '<div class="wrap">
       <div class="updated" style="background-color:#7AD03A;">
         <p><strong style="color:#FFF;" >Details are updated successfully.
@@ -176,6 +204,20 @@ function isNumber(evt)
               <option  value="0"  <?php if($myrows[2]==0) echo 'selected="selected"'; ?> >No</option>
             </select></td>
         </tr>
+		<tr>
+          <td class="misc-pub-section">Show Star Ratings  : </td>
+          <td class="misc-pub-section"><select name="pra_star_ratings" id="pra_star_ratings">
+              <option  value="1" <?php if($myrows[7]==1) echo 'selected="selected"'; ?> >Yes</option>
+              <option  value="0"  <?php if($myrows[7]==0) echo 'selected="selected"'; ?> >No</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td class="misc-pub-section">Show Author Designation/Post  : </td>
+          <td class="misc-pub-section"><select name="pra_designation" id="pra_designation">
+              <option  value="1" <?php if($myrows[8]==1) echo 'selected="selected"'; ?> >Yes</option>
+              <option  value="0"  <?php if($myrows[8]==0) echo 'selected="selected"'; ?> >No</option>
+            </select></td>
+        </tr>
         <tr>
           <td class="misc-pub-section">Pause Duration  : </td>
           <td class="misc-pub-section"><input type="text" onkeypress="return isNumber(event);" name="pra_pauseduration" value="<?php echo $myrows[3]; ?>"  />
@@ -190,14 +232,14 @@ function isNumber(evt)
           <td class="misc-pub-section">Pause On Hover : </td>
           <td class="misc-pub-section"><select name="pra_pauseonhover">
               <option  value="true" <?php if($myrows[5]=='true') echo 'selected="selected"'; ?> >Yes</option>
-              <option  value="false"  <?php if($myrows[5]=='false') echo 'selected="selected"'; ?> >No</option>
+              <option  value="false" <?php if($myrows[5]=='false') echo 'selected="selected"'; ?> >No</option>
             </select>
         </tr>
         <tr>
           <td class="misc-pub-section">Autoplay  : </td>
           <td class="misc-pub-section"><select name="pra_autoplay">
               <option  value="true" <?php if($myrows[6]=='true') echo 'selected="selected"'; ?> >Yes</option>
-              <option  value="false"  <?php if($myrows[6]=='false') echo 'selected="selected"'; ?> >No</option>
+              <option  value="false" <?php if($myrows[6]=='false') echo 'selected="selected"'; ?> >No</option>
             </select></td>
         </tr>
         <tr>

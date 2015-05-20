@@ -36,8 +36,7 @@
 }
 .pra_testimonial cite .author {
 	color: #479ccf;
-	font-size: 21px;
-	line-height: 40px;
+	font-size: 18px;
 	margin-left: 12px;
 }
 .pra_next, .pra_prev {
@@ -49,18 +48,13 @@
 	height: 27px;
 	line-height: 20px;
 	padding: 1px 7px 0 0;
-	text-decoration: none;
+	text-decoration: none !important;
 	width: 27px;
 	z-index: 9;
 }
 .pra_next:hover, .pra_prev:hover {
-	
 	background: none repeat scroll 0 0 #000;
-color: #fff !important;
-
-	
-	
-
+	color: #fff !important;
 	text-decoration:none;
 }
 .pra_testimonial {
@@ -70,4 +64,70 @@ color: #fff !important;
 	z-index: 10;
 	display:block;
 	clear:both;
+}
+/****************/
+
+
+.pra_front_stars {
+	width: 100px;
+	height: 19px;
+	background: url(images/stars.png) 0 0 repeat-x;
+	position: relative;
+	left:6%;
+}
+.pra_front_stars .rating {
+	height: 19px;
+	background: url(images/stars.png) 0 -19px repeat-x;
+}
+.pra_front_stars input[type="radio"] {
+	display: none;
+}
+.pra_front_stars label {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 19px;
+	width: 100px;
+}
+.pra_front_stars:hover label {
+	display: block;
+}
+.pra_front_stars label + input + label {
+	width: 81px;
+}
+.pra_front_stars label + input + label + input + label {
+	width: 62px;
+}
+.pra_front_stars label + input + label + input + label + input + label {
+	width: 43px;
+}
+.pra_front_stars label + input + label + input + label + input + label + input + label {
+	width: 24px;
+}
+.pra_front_stars input:checked + label {
+	display: block;
+	background: url(images/stars.png) 0 -19px repeat-x;
+}
+.pra_rightsection {
+	float:left;
+}
+.pra_rotator .photo {
+	float:left;
+}
+.pra_clear {
+	border: medium none;
+	clear: both;
+	float: none;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+}
+.pra_rightsection strong {
+	clear: both;
+	display: block;
+	font-size: 12px;
+	text-align: right;
+	color: #333;
+	font-weight: bold;
 }

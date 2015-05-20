@@ -23,6 +23,11 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 * Most Browser Supported
 
 
+### Rate The Plugin
+	
+* [We'd love to hear from you!](https://wordpress.org/support/view/plugin-reviews/awesome-testimonials#postform)
+
+
 
 == Installation ==
 
@@ -42,5 +47,8 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 * March. 03, 2015 - v1.0.0
 * Released Plugin
 
+= 2.0.0 = 
+* May. 03, 2015 - v1.0.0
+* New Feature added (Start Ratings | Designation )
 
 

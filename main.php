@@ -3,7 +3,7 @@
 Plugin Name: Awesome Testimonials
 Plugin URI: http://steponwebstudio.com/
 Description: Wordpress Testimonials with front end Add Testimonials Facility.
-Version: 1.1
+Version: 2.0
 Author: Prakash
 Author URI: http://steponwebstudio.com/
 License: GPL
@@ -15,11 +15,23 @@ global $wpdb;
 register_activation_hook(__FILE__,'pra_install');
 register_deactivation_hook(__FILE__ , 'pra_uninstall' );
 
+if(!defined('PR_CSS_DIR'))
+ {
+    define('PR_CSS_DIR',plugin_dir_url( __FILE__ ).'css');
+ }
+ if(!defined('PR_IMAGE_DIR'))
+ {
+    define('PR_IMAGE_DIR',plugin_dir_url( __FILE__ ).'images');
+ }
+ 
+
+
 
 function pra_theme_enqueue() {
 		wp_register_style( 'pra_TestimonialsCss', plugins_url('css/pra_testimonial.css', __FILE__) );
 		wp_enqueue_style( 'pra_TestimonialsCss' );
 		
+  	
 		wp_enqueue_script('jquery');		
 		
 		wp_register_script( 'pra_TestimonialMinCss', plugins_url('js/jquery.carouFredSel-6.2.1.js', __FILE__) );
@@ -28,8 +40,17 @@ function pra_theme_enqueue() {
 		wp_register_script( 'pra_TestimonialsJs', plugins_url('js/pra_testimonials.js', __FILE__) );
 		wp_enqueue_script( 'pra_TestimonialsJs' );
 	}
+
+
+function pra_admin_enqueue() {
+		wp_register_style( 'pra_AdminCss', plugins_url('css/admin-style.css', __FILE__) );
+		wp_enqueue_style( 'pra_AdminCss' );
+}
 	
+
+
 add_action( 'wp_enqueue_scripts', 'pra_theme_enqueue' );
+add_action('admin_enqueue_scripts',pra_admin_enqueue());//register plugin scripts and css in wp-admin
 
 
 function pra_install()
@@ -68,6 +89,12 @@ function pra_install()
 		  
 	$wpdb->query("INSERT INTO $table2 (id,metaname, value)
 	      VALUES (7,'autoplay','true' )");
+		  
+	$wpdb->query("INSERT INTO $table2 (id,metaname, value)
+	      VALUES (8,'show_star_ratings','1' )");
+	
+	$wpdb->query("INSERT INTO $table2 (id,metaname, value)
+	      VALUES (9,'show_designation','1' )");
 		  
 
 	  
@@ -160,6 +187,90 @@ register_post_type('pra_testimonials',$args);
 		add_theme_support( 'post-thumbnails');
 	}
 
+
+/****************************** Prakash **********************************************/
+
+
+add_action("admin_init", "admin_init");
+    add_action('save_post', 'save_pra_ratings');  
+
+    function admin_init(){
+        add_meta_box("pra_testimonials_ratings", "Strat(s)", "meta_options", "pra_testimonials", "advanced", "low");
+		add_meta_box("pra_testimonials_designation", "Designation/Post", "designation_meta_options", "pra_testimonials", "advanced", "low");
+    }  
+
+
+    function meta_options(){
+        global $post;
+        $custom = get_post_custom($post->ID);
+        $pra_ratings = $custom["pra_ratings"][0];
+?>
+
+
+<div class="pra_rating_section">
+
+<div class="pra_stars">
+  <?php if($pra_ratings==1)
+		{
+			$pra_style= 'style=width:20%';
+		} 
+	  else if($pra_ratings==2)
+		{
+			$pra_style= 'style=width:40%';
+		}
+	  else if($pra_ratings==3)
+		{
+			$pra_style= 'style=width:60%';
+		} 
+      else if($pra_ratings==4)
+		{
+			$pra_style= 'style=width:80%';
+		}
+	  else
+		{
+			$pra_style= 'style=width:100%';
+		}
+
+?>
+  <div class="rating"  <?php echo $pra_style; ?> ></div>
+  <input type="radio" name="pra_ratings" id="star5" value="5">
+  <label for="star5"></label>
+  <input type="radio" name="pra_ratings" id="star4" value="4">
+  <label for="star4"></label>
+  <input type="radio" name="pra_ratings" id="star3" value="3">
+  <label for="star3"></label>
+  <input type="radio" name="pra_ratings" id="star2" value="2">
+  <label for="star2"></label>
+  <input type="radio" name="pra_ratings" id="star1" value="1">
+  <label for="star1"></label>
+</div>
+</div>
+<?php
+    } 
+	
+	
+	 function designation_meta_options(){
+        global $post;
+        $custom = get_post_custom($post->ID);
+        $pra_designation = $custom["pra_designation"][0];
+?>
+
+<input type="text" value="<?php echo $pra_designation; ?>" name="pra_designation"  />
+
+
+<?php
+    }  
+
+	function save_pra_ratings(){
+		global $post;
+		update_post_meta($post->ID, "pra_ratings", $_POST["pra_ratings"]);
+		update_post_meta($post->ID, "pra_designation", $_POST["pra_designation"]);
+	}
+
+
+/****************************** Prakash **********************************************/
+
+
 /*******************************************************************************/
 
 
@@ -172,10 +283,7 @@ function pra_admin_menu_list()
 
 //Add ShortCode for "front end listing"
 //Short Code [pra_Testimonial]
+include('testimonial.php');
 add_shortcode("pra_testimonial","pra_testimonial_shortcode");
- function pra_testimonial_shortcode($atts) 
-{ 
-	  include 'testimonial.php';
-}
 
 ?>
