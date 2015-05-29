@@ -50,8 +50,8 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 * Released Plugin
 
 = 2.0.0 = 
-* May. 03, 2015 - v1.0.0
+* May. 03, 2015 - v2.0.0
 * New Feature added (Start Ratings | Designation )
-
+* Flixible ( Old issues resolved )
 
 
