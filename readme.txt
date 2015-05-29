@@ -52,6 +52,6 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 = 2.0.0 = 
 * May. 03, 2015 - v2.0.0
 * New Feature added (Start Ratings | Designation )
-* Flixible ( Old issues resolved )
+* Fixed problem with shortcode to display testimonial any place on website.
 
 
