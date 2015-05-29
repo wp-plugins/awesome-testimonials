@@ -1,6 +1,6 @@
 === Awesome Testimonials ===
 Contributors: Prakash30
-Tags: testimonials, testimonial, testimony, Auto rotate testimonial, customizable testimonial, shortcode, awesome, responsive 
+Tags: testimonials, testimonial, testimony, Auto rotate testimonial, customizable testimonial, shortcode, awesome, responsive, Awesome Testimonial, start ratings
 Requires at least: 3.0.1
 Tested up to: 4.2.2	
 Stable tag: 3.6.1
@@ -18,6 +18,8 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 * Easy Customizable
 * Easy to Use
 * Autoplay option
+* Testimonial with start ratings of user
+* User designation/Post field is available
 * Shortcode Powered
 * Simple Testimonial Management Interface
 * Most Browser Supported
@@ -25,7 +27,7 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 
 ### Rate The Plugin
 	
-* [We'd love to hear from you!](https://wordpress.org/support/view/plugin-reviews/awesome-testimonials#postform)
+* [I'd love to hear from you!](https://wordpress.org/support/view/plugin-reviews/awesome-testimonials#postform)
 
 
 
@@ -50,5 +52,6 @@ Awesome Testimonials : Allow Admin to customize testimonial, Easy to use and use
 = 2.0.0 = 
 * May. 03, 2015 - v1.0.0
 * New Feature added (Start Ratings | Designation )
+
 
 
