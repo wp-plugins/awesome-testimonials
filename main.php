@@ -281,9 +281,14 @@ function pra_admin_menu_list()
 
 
 
-//Add ShortCode for "front end listing"
+//Add ShortCode
 //Short Code [pra_Testimonial]
 include('testimonial.php');
 add_shortcode("pra_testimonial","pra_testimonial_shortcode");
+
+//Short Code [pra_alltestimonials]
+include('alltestimonial.php');
+add_shortcode("pra_alltestimonials","pra_alltestimonials_shortcode");
+
 
 ?>

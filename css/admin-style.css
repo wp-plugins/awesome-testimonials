@@ -45,3 +45,11 @@
 .pra_label {
 	float:left;
 }
+.pra_lovedto a {
+	background: url(images/loved.png) no-repeat;
+	height: 163px;
+	position: fixed;
+	right: 0;
+	top: 20%;
+	width: 200px;
+}

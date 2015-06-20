@@ -250,12 +250,18 @@ function isNumber(evt)
         </tr>
       </table>
     </form>
+     <div class="pra_lovedto"><a href="https://wordpress.org/support/view/plugin-reviews/awesome-testimonials#postform"></a></div>
   </div>
 </div>
 <div class="wrap">
   <div class="updated" style=" background-color: #0074A2;">
     <p><strong style="color:#FFF;">Short code for Testimonial :
       <input type="text" value="[pra_testimonial]" style=" border-radius: 5px; width: 200px;" readonly="readonly" >
+      </strong> </p>
+  </div>
+  <div class="updated" style=" background-color: #3498db;">
+    <p><strong style="color:#FFF;">Short code to display ALL Testimonials :  
+      <input type="text" value="[pra_alltestimonials]" style=" border-radius: 5px; width: 200px;" readonly="readonly" >
       </strong> </p>
   </div>
 </div>
