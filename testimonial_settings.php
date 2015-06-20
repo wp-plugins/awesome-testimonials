@@ -261,7 +261,7 @@ function isNumber(evt)
   </div>
   <div class="updated" style=" background-color: #3498db;">
     <p><strong style="color:#FFF;">Short code to display ALL Testimonials :  
-      <input type="text" value="[pra_alltestimonials]" style=" border-radius: 5px; width: 200px;" readonly="readonly" >
+      <input type="text" value='[pra_alltestimonials PerPage="10"]' style=" border-radius: 5px; width: 255px;" readonly="readonly" >
       </strong> </p>
   </div>
 </div>
