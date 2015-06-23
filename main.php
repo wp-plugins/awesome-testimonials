@@ -3,7 +3,7 @@
 Plugin Name: Awesome Testimonials
 Plugin URI: http://steponwebstudio.com/
 Description: Wordpress Testimonials with front end Add Testimonials Facility.
-Version: 2.0
+Version: 2.1
 Author: Prakash
 Author URI: http://steponwebstudio.com/
 License: GPL
@@ -271,7 +271,7 @@ add_action("admin_init", "admin_init");
 /****************************** Prakash **********************************************/
 
 
-/*******************************************************************************/
+/************************** Display all Testimonails *****************************************************/
 
 
 function pra_admin_menu_list()
@@ -291,4 +291,38 @@ include('alltestimonial.php');
 add_shortcode("pra_alltestimonials","pra_alltestimonials_shortcode");
 
 
+
+/************************** Create Widget *****************************************************/
+
+// Creating the widget 
+class pra_widget extends WP_Widget {
+	function __construct() {
+	parent::__construct(
+	'pra_widget', 
+	
+
+	__('PRA Testimonial Widget', 'pra_widget_domain'), 
+	
+	// Widget description
+	array( 'description' => __( 'Widget to show testimoial on sidebar', 'pra_widget_domain' ), ) 
+	);
+	}
+	
+	// Creating widget front-end
+	public function widget( $args, $instance ) {
+	echo $args['before_widget'];
+	
+	// This is where you run the code and display the output
+	echo do_shortcode( '[pra_testimonial]' );
+	
+	echo $args['after_widget'];
+	}
+} // Class pra_widget ends here
+
+// Register and load the widget
+function pra_load_widget() {
+	register_widget( 'pra_widget' );
+}
+add_action( 'widgets_init', 'pra_load_widget' );
 ?>
+
